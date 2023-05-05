@@ -11,5 +11,5 @@ This repository contains the following files:
 The example MDP was built to showcase all features of an MDP in a small version. For example, transitions can have a guaranteed probability of reach *s'* or a stochastic transition can exist.
 
 <p align = 'center'>
-<img src = 'https://github.com/team-daniel/Markov-Decision-Process/blob/master/MDP%20Example.png?raw=true' width="50%">
+<img src = 'https://github.com/team-daniel/Markov-Decision-Process/blob/master/MDP%20Example.png?raw=true' width="75%">
 </p>
