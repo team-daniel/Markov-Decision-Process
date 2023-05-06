@@ -1,3 +1,5 @@
+import random
+
 class MDP:
     def __init__(self, initial_state, terminal_states, 
                  transitions = {}, reward = None):
@@ -60,3 +62,22 @@ class MDP:
             return [None]
         else:
             return list(self.transitions[state])
+        
+    # Move from a state with an action
+    def step(self, state, action):
+        if state in self.states:
+            if action in self.get_possible_actions(state):
+                transitions = self.get_transitions(state, action)
+                if len(transitions) > 1:
+                    trans_probs = [t[0] for t in transitions]
+                    trans_states = [t[1] for t in transitions]
+                    new_state = random.choices(trans_states, trans_probs, k=1)
+                    return new_state
+                else:
+                    return transitions[0][1]
+            else:
+                print("Warning: Action cannot be taken from this state!")
+                return state
+        else:
+            print("Warning: State not in MDP!")
+            return None

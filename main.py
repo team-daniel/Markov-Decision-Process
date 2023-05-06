@@ -49,3 +49,6 @@ print("Action space: " +
 
 print("Transtions from action southeast in state 0: " + 
       str(mdp.get_transitions("0", "southeast")))
+
+print("Moving from 0 with action east gets us to: " + 
+      str(mdp.step("0", "east")))
